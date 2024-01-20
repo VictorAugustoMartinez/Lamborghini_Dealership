@@ -1,0 +1,40 @@
+[
+    {
+        "id": "",
+        "model" : "Aventador",
+        "brand": "Lamborghini ",
+        "color": "Purple",
+        "price_Usd": 550542.0,
+        "topspeed_kmph": 355,
+        "power_Hp": 780,
+	"sold": false,
+        "manufactured": {
+            "year": 2021,
+            "month": 3,
+            "day": 30,
+            "fulldata":""
+        },
+        "licenseplate":{
+            "plate" : "EAI1064"
+        }
+    },
+    {
+        "id": "",
+        "model" : "Aventador",
+        "brand": "Lamborghini ",
+        "color": "Red",
+        "price_Usd": 540542.0,
+        "topspeed_kmph": 355,
+        "power_Hp": 780,
+	"sold": false,
+        "manufactured": {
+            "year": 2022,
+            "month": 4,
+            "day": 27,
+            "fulldata":""
+        },
+        "licenseplate":{
+            "plate" : "HJP9952"
+        }
+    }  
+]  
