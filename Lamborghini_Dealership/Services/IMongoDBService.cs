@@ -8,7 +8,7 @@ namespace Lamborghini_Dealership.Services
     {
         Task CreateAsync(Car car);
         Task CreateManyAsync(List<Car> car);
-        Task<List<Car>> GetOneAsync(string id);
+        Task<Car> GetOneAsync(string id);
         Task<List<Car>> GetAllAsync();
         Task<List<Car>> GetAvailableAsync();
         Task SellCarAsync(string id);

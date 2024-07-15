@@ -30,10 +30,10 @@ namespace Lamborghini_Dealership.Services
             return;
         }
 
-        public async Task<List<Car>> GetOneAsync(string id)
+        public async Task<Car> GetOneAsync(string id)
         {
             FilterDefinition<Car> filter = Builders<Car>.Filter.Eq("Id", id);
-            return await _carCollection.Find(filter).ToListAsync();
+            return await _carCollection.Find(filter).FirstOrDefaultAsync();
         }
         public async Task<List<Car>> GetAllAsync()
         {

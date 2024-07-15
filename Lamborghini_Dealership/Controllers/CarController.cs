@@ -19,12 +19,12 @@ namespace Lamborghini_Dealership.Controllers
         ///     Get a specific Car
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a Car object</returns>
         /// <response code="200">Returns a Car by the Id</response>
         /// <response code="400">The Id must be passed inside the url</response>
         [HttpGet("v1/Car/{id}")]
         [Produces("application/json")]
-        public async Task<List<Car>> GetCar(string id)
+        public async Task<Car> GetCar(string id)
         {
             return await _mongoDBService.GetOneAsync(id);
         }
@@ -32,7 +32,7 @@ namespace Lamborghini_Dealership.Controllers
         /// <summary>
         ///     Get all the Cars
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a list of Car objects</returns>
         /// <response code="200">Returns a Car by the Id</response>
         [HttpGet("v1/Cars")]
         [Produces("application/json")]
@@ -44,7 +44,7 @@ namespace Lamborghini_Dealership.Controllers
         /// <summary>
         /// Get just the available Cars
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a list of Car objects</returns>
         /// <response code="200">Returns a Car by the Id</response>
         [HttpGet("v1/Cars/Available")]
         [Produces("application/json")]
@@ -58,7 +58,7 @@ namespace Lamborghini_Dealership.Controllers
         ///     Creates a Car
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>Car</returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the newly created Car object</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -101,7 +101,7 @@ namespace Lamborghini_Dealership.Controllers
         ///     Creates many Cars
         /// </summary>
         /// <param name="model"></param>
-        /// <returns>List of Car</returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the list of newly created Car objects</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -146,7 +146,7 @@ namespace Lamborghini_Dealership.Controllers
         ///     Sell a specific Car
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a message indicating success</returns>
         /// <response code="200">The Car has been sold</response>
         /// <response code="400">The Id must be passed inside the url</response>
         [HttpPut("v1/Car/{id}")]
@@ -161,7 +161,7 @@ namespace Lamborghini_Dealership.Controllers
         ///     Deletes a specific Car
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a message indicating success</returns>
         /// <response code="200">The Car has been deleted</response>
         /// <response code="400">The Id must be passed inside the url</response>
         [HttpDelete("v1/Car/{id}")]
